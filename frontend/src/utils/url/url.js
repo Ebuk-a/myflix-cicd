@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:4000/api/v1'
+const baseUrl = 'http://34.72.72.238:4000/api/v1'
 const baseImageUrl = 'https://storage.googleapis.com/devops_movie_bucket/image_uploads/'
 const baseMovieUrl = 'https://storage.googleapis.com/devops_movie_bucket/movie_uploads/'
 
