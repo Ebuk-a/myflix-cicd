@@ -1,0 +1,220 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: hsl(201, 69%, 10%);
+
+  --clr-primary-2: hsl(200, 86%, 17%);
+	--clr-primary-3: hsl(200, 77%, 27%);
+
+	/* primary color/ main color */
+	--clr-primary-4: hsl(200, 69%, 38%);
+
+  /* darkest grey - used for headings */
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: hsl(211, 39%, 23%);
+	--clr-grey-3: hsl(209, 34%, 30%);
+	--clr-grey-4: hsl(209, 28%, 39%);
+
+  /* grey used for paragraphs and background */
+	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-6: hsl(209, 23%, 60%);
+	--clr-grey-7: hsl(211, 27%, 70%);
+	--clr-grey-8: hsl(210, 31%, 80%);
+	--clr-grey-9: hsl(212, 33%, 89%);
+	--clr-grey-10: hsl(206, 33%, 96%);
+
+  --clr-white: #fff;
+	--clr-green-light: hsl(169, 84%, 68%);
+	--clr-green-dark: hsl(169, 39%, 32%);
+	--clr-yellow: hsl(60, 100%, 50%);
+	--clr-red: hsl(0, 100%, 75%);
+	--clr-black: #1f252f;
+
+  --transition: all 0.3s linear;
+	--spacing: 0.05rem;
+	--radius: 0.25rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+	--max-width: 73.125rem;
+	--fixed-width: 28.125rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/* html {
+	height: 100%;
+} */
+
+/* reset & common styles */
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+img:not(.logo) {
+	width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	letter-spacing: var(--spacing);
+	text-transform: capitalize;
+	line-height: 1;
+	margin-bottom: 1.5rem;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: clamp(2.5rem, 4.3vw, 4.3rem);
+}
+
+h2 {
+	font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+}
+h3 {
+	font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+}
+h4 {
+	font-size: clamp(1.5rem, 1vw, 1rem);
+}
+
+p {
+	margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 48em) {
+	body {
+		font-size: 1rem;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 1;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.btn {
+	/* color: rgba(230, 230, 230, 0.9); */
+	padding: 0.75rem 1.5rem;
+	font-size: 0.85em;
+	font-weight: 700;
+	background-image: linear-gradient(
+		180deg,
+		rgba(106, 242, 216, 0.7) 17.95%,
+		rgba(30, 119, 165, 0.9) 105.5%
+	);
+	letter-spacing: var(--spacing);
+	display: inline-block;
+	text-transform: capitalize;
+	cursor: pointer;
+	border-radius: var(--radius);
+	transition: var(--transition);
+	position: relative;
+	z-index: 1;
+  border: none;
+  color: var(--clr-black);
+	/* opacity: 0.85; */
+}
+
+.btn--lg {
+	font-size: 1em;
+	padding: 0.75rem 2rem;
+}
+
+#root {
+  min-height: 100vh;
+  background-image: url('./assets/myflix-bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay-wrapper {
+  color: var(--clr-white);
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
+
+.nav {
+  /* padding-top: 1rem; */
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-wrapper-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 12em 0;
+  padding: 1rem 1.5rem;
+  /* margin: 4rem 0; */
+}
+
+.sub-title {
+  font-size: 1.2rem;
+}
+
+.btn-size-l {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 48em) {
+  .nav-wrapper,
+  .header {
+    padding: 1rem 3rem;
+  }
+
+  .header {
+    max-width: 60ch;
+    margin: 12rem auto;
+  }
+}

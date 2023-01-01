@@ -1,0 +1,60 @@
+version: '3.9'
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    healthcheck:
+        test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+    restart: always
+    networks:
+      - backend
+
+  customer:
+    build: ./customer
+    ports:
+      - 4001:5000
+    environment:
+      MONGO_URI: mongodb://restheart:R3ste4rt!@34.66.17.217:27017
+      JWT_SECRET: MyFlIXSeCreT
+      JWT_LIFETIME: 30d
+      DB_NAME: myflix_ms_customer
+    restart: always
+    depends_on:
+      - rabbitmq
+    networks:
+      - backend
+
+  movies:
+    build: ./movies
+    ports:
+      - 4002:5000
+    environment:
+      MONGO_URI: mongodb://restheart:R3ste4rt!@34.66.17.217:27017
+      JWT_SECRET: MyFlIXSeCreT
+      DB_NAME: myflix_ms_movie
+    restart: always
+    depends_on:
+      - rabbitmq
+    networks:
+      - backend
+
+  web:
+    build: ./frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - rabbitmq
+      - movies
+      - customer
+    networks:
+    - backend
+
+networks:
+  backend:
+    driver: bridge

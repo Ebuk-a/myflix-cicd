@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYFLIX APP / MOVIES</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/styles/movies.css">
+  <script src="./src/utils/auth.js"></script>
+  <script src="./src/utils/url/url.js" defer></script>
+  <script src="./src/utils/utils.js" defer></script>
+  <script src="./src/utils/movies.js" defer></script>
+</head>
+<body>
+  <section id="root">
+    <section class="overlay-wrapper overlay-wrapper-movies">
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div id="logo" class="logo">MyFlix</div>
+          <div>
+            <ul class="nav-wrapper-links">
+              <li>
+                <span class="user-copy">user: </span>
+                <span id="user"></span>
+              </li>
+              <li>
+                <button id="btn-logout" class="btn">logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="movies-container">
+          <section class="stream-movie-container">
+            <div class="stream-movie-container-movies">
+              <div class="movie-header-container">
+                <h3>Movie Collection</h3>
+              </div>
+
+              <div class="select-category-container">
+                <span class="select-header">category:</span>
+                <select id="select-category" class="select-category">
+                  <option value="" class="select-item">All</option>
+                  <option value="history">History</option>
+                  <option value="movies">Movies</option>
+                  <option value="cartoon">Cartoon</option>
+                </select>
+              </div>
+    
+              <section id="movie-card-wrapper" class="movie-card-wrapper"></section>
+            </div>
+
+            <div class="stream-movie-container-recommend">
+              <h4>Recommendation</h4>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+  </section>
+</body>
+</html>

@@ -1,0 +1,167 @@
+.overlay-wrapper-movies {
+  background-color: rgb(0,0,0,0.8);
+}
+
+.user-copy {
+  display: none;
+}
+
+.movies-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.movies-container {
+  min-height: 100vh;
+  background: var(--clr-grey-10);
+  color: var(--clr-black);
+  padding: 1rem;
+}
+
+.stream-movie-container-movies {
+  flex: 8;
+}
+
+.stream-movie-container-recommend {
+  flex: 4;
+}
+
+.movie-header-container {
+  margin: 1rem 0 1rem;
+}
+
+.select-category-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.select-category {
+  width: 100%;
+  padding: 0.5rem 0;
+  outline: none;
+}
+
+.select-header {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-right: 0.5rem;
+}
+
+.movie-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.movie-card {
+  max-width: 350px;
+  background-color: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.card-image-container {
+  width: 100%;
+}
+
+.card-image-container img {
+  max-height: 236px;
+  min-width: 330px;
+}
+
+.card-info {
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+.card-info p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.card-info-genre {
+  color: var(--clr-grey-4);
+}
+
+@media screen and (min-width: 48em) {
+  .user-copy {
+    display: inline;
+  }
+
+  .movies-container {
+    padding: 1rem 3rem;
+  }
+
+  .movie-card-wrapper {
+    flex-direction: row;
+  }
+
+  .movie-card {
+    max-width: 420px;
+  }
+
+  .card-image-container img {
+    height: 236px;
+    max-height: 236px;
+    min-width: 420px;
+  }
+
+  .select-category {
+    width: 50%;
+  }
+}
+
+/* MOVIE STREAMING PAGE STYLES */
+.stream-movie-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stream-movie {
+  flex: 8;
+}
+
+.stream-movie-history {
+  flex: 4;
+}
+
+.stream-movie-history h3 {
+  text-align: center;
+}
+
+.video {
+  min-height: 300px;
+}
+
+.stream-title-name {
+  color: var(--clr-grey-4);
+}
+
+@media screen and (min-width: 48em) {
+  .stream-movie-container {
+    flex-direction: row;
+  }
+
+  .video {
+    min-height: 500px;
+  }
+
+  .stream-title {
+    margin: 1rem 0;
+  }
+}

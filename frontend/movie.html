@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYFLIX APP / MOVIE</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/styles/movies.css">
+  <script src="./src/utils/auth.js"></script>
+  <script src="./src/utils/url/url.js" defer></script>
+  <script src="./src/utils/utils.js" defer></script>
+  <script src="./src/utils/movie.js" defer></script>
+</head>
+<body>
+  <section id="root">
+    <section class="overlay-wrapper overlay-wrapper-movies">
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div id="logo" class="logo">MyFlix</div>
+          <div>
+            <ul class="nav-wrapper-links">
+              <li>
+                <span class="user-copy">user: </span>
+                <span id="user"></span>
+              </li>
+              <li>
+                <span class="movies-link">movies</span>
+              </li>
+              <li>
+                <button id="btn-logout" class="btn">logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="movies-container">
+          <section class="stream-movie-container">
+            <div class="stream-movie">
+              <video id="video" width="100%" class="video" controls>
+                <!-- <source id="stream" src="" type="video/mp4"> -->
+                Your browser does not support the video tag.
+              </video>
+              <h5 class="stream-title">Showing: <span class="stream-title-name"></span></h5>
+            </div>
+            <div class="stream-movie-history">
+              <h3>Recently Viewed</h3>
+              <section id="movie-card-wrapper" class="movie-card-wrapper"></section>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+  </section>
+</body>
+</html>

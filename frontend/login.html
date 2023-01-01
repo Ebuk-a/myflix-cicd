@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFlix App / Login</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/styles/login.css">
+  <script src="./src/utils/url/url.js" defer></script>
+  <script src="./src/index.js" defer></script>
+  <script src="./src/utils/login.js" defer></script>
+</head>
+<body>
+  <section id="root">
+    <section class="overlay-wrapper">
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div id="logo" class="logo">MyFlix</div>
+          <div>
+            <ul>
+              <li>
+                <button id="btn-sign-up" class="btn">sign up</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="header header-sign-up">
+        <form class="form">
+          <div class="form-wrapper">
+            <div class="form-item">
+              <label for="email">email</label>
+              <input type="email" id="email">
+            </div>
+  
+            <div class="form-item">
+              <label for="password">password</label>
+              <input type="password" id="password">
+            </div>
+
+            <div class="form-item">
+              <p id="form-login-error" class="sign-up-error"></p>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <button id="form-login" class="btn btn-size-l">login</button>
+          </div>
+        </form>
+      </main>
+    </section>
+  </section>
+</body>
+</html>
