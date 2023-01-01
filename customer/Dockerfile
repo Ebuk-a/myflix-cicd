@@ -5,7 +5,7 @@ FROM node:alpine
 WORKDIR /usr/src/app
 
 #copy files starting with packages and of json format to the default(/usr/src/app) directory
-COPY package*.json .
+COPY package*.json ./
 
 # clean install npm (node) which will create the node_modules folder (having base image dependencies) on the default directory
 RUN npm ci

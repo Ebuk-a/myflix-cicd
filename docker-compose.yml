@@ -1,5 +1,13 @@
 version: '3.9'
 services:
+  gateway:
+    build: ./gateway
+    ports:
+      - 4000:4000
+    restart: always
+    networks:
+      - backend
+
   rabbitmq:
     image: rabbitmq:3.8-management-alpine
     ports:
@@ -11,6 +19,8 @@ services:
         timeout: 10s
         retries: 5
     restart: always
+    depends_on:
+      - gateway
     networks:
       - backend
 
@@ -25,6 +35,7 @@ services:
       DB_NAME: myflix_ms_customer
     restart: always
     depends_on:
+      - gateway
       - rabbitmq
     networks:
       - backend
@@ -39,6 +50,7 @@ services:
       DB_NAME: myflix_ms_movie
     restart: always
     depends_on:
+      - gateway
       - rabbitmq
     networks:
       - backend
@@ -49,6 +61,7 @@ services:
     ports:
       - "80:80"
     depends_on:
+      - gateway
       - rabbitmq
       - movies
       - customer
