@@ -1,7 +1,6 @@
 const baseImageUrl = 'https://storage.googleapis.com/devops_movie_bucket/image_uploads/'
 const baseMovieUrl = 'https://storage.googleapis.com/devops_movie_bucket/movie_uploads/'
 
-
 const url = location.href.split('//')[1]
 const urlIP = url.split('/')[0]
 let baseUrl = `http://${urlIP}:4000/api/v1`
