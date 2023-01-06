@@ -1,6 +1,10 @@
-const baseUrl = 'http://34.72.72.238:4000/api/v1'
 const baseImageUrl = 'https://storage.googleapis.com/devops_movie_bucket/image_uploads/'
 const baseMovieUrl = 'https://storage.googleapis.com/devops_movie_bucket/movie_uploads/'
+
+
+const url = location.href.split('//')[1]
+const urlIP = url.split('/')[0]
+let baseUrl = `http://${urlIP}:4000/api/v1`
 
 const api = async (url, data = {}, method = '', token = '') => {
   const options = {
@@ -16,6 +20,7 @@ const api = async (url, data = {}, method = '', token = '') => {
     delete options.body
   }
 
+  console.log(baseUrl)
   try {
     const response = await fetch(`${baseUrl}/${url}`, options)
 
@@ -28,6 +33,7 @@ const api = async (url, data = {}, method = '', token = '') => {
     return responseData
 
   } catch (error) {
+    localStorage.removeItem('$baseUrl')
     throw error
   }
 }
