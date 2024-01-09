@@ -28,8 +28,8 @@ The tools used
 
 3. The mongodb server needs to be up and running. This is where the data persists. The connection string for the db should be stored for each service, found at paths below (after cloning repo)
     
-    movies-> .env <br />
-    customer-> .env <br />
+    movies/.env <br />
+    customer/.env <br />
     docker-compose.yml <br />
 
 ### Steps to run after cloning the repo
