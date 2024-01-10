@@ -1,11 +1,11 @@
 ## Table of contents
 * [Introduction: Continuous Delployment and Integration for Data pipeline](#Introduction)
 * [Technologies](#technologies)
-* [Local Test](#local-test)
+* [Test](#test)
 * [Related Works](#related-works)
 
 ## Introduction: Continuous Delployment and Integration for Data pipeline
-Development of a movie streaming application in a Microservice Architecture. <br />
+Development of a movie streaming application in a Microservice Architecture, deployable using Jenkins for CI/CD on VM (EC2 instance). <br />
 
 
 ## Technologies 
@@ -19,14 +19,14 @@ The tools used
 7. Elastic Container Registry/ Git
 
 
-## Local Test
+## Test
 ### Requirements before the commands
 
-1. You need to have docker and docker compose installed (maybe you should just download docker desktop)
+1. You need to have docker and docker compose installed on VM/local (maybe you should just download docker desktop)
 
-2. You need to have node and npm installed (just visit the nodejs website and download)
+2. You need to have node and npm installed on VM/local (just visit the nodejs website and download)
 
-3. The mongodb server needs to be up and running. This is where the data persists. The connection string for the db should be stored for each service, found at paths below (after cloning repo)
+3. The mongodb server needs to be up, running and reachable from application server or local - VM. This is where the data persists. The connection string for the db should be stored for each service, found at paths below (after cloning repo)
     
     movies/.env <br />
     customer/.env <br />
