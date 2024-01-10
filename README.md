@@ -17,6 +17,7 @@ The tools used
 5. RabbitMQ
 6. EC2
 7. Elastic Container Registry/ Git
+8. Jenkins
 
 
 ## Test
